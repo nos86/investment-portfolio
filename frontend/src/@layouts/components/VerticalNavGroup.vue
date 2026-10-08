@@ -159,7 +159,7 @@ watch(
     >
       <Component
         :is="layoutConfig.app.iconRenderer || 'div'"
-        v-bind="item.icon || layoutConfig.verticalNav.defaultNavItemIconProps"
+        v-bind="(item.icon as Record<string, unknown>) || (layoutConfig.verticalNav.defaultNavItemIconProps as Record<string, unknown>)"
         class="nav-item-icon"
       />
 

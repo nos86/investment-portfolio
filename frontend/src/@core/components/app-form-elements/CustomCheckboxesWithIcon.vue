@@ -37,7 +37,7 @@ const updateSelectedOption = (value: string[] | null) => {
         <slot :item="item">
           <div class="d-flex flex-column align-center text-center gap-2">
             <VIcon
-              v-bind="item.icon"
+              v-bind="typeof item.icon === 'object' && item.icon ? item.icon as Record<string, unknown> : {}"
               class="text-high-emphasis"
             />
 

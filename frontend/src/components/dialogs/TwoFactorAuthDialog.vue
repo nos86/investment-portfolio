@@ -77,7 +77,7 @@ const openSelectedMethodDialog = () => {
               <div class="d-flex flex-column">
                 <div class="d-flex gap-1 mb-2">
                   <VIcon
-                    :icon="items.item.icon"
+                    :icon="typeof items.item.icon === 'string' ? items.item.icon : undefined"
                     size="20"
                     class="text-high-emphasis"
                   />
