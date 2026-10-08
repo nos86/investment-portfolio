@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<Props>(), {
       <Component
         :is="layoutConfig.app.iconRenderer || 'div'"
         class="nav-item-icon"
-        v-bind="item.icon || layoutConfig.verticalNav.defaultNavItemIconProps"
+        v-bind="(item.icon as Record<string, unknown>) || (layoutConfig.verticalNav.defaultNavItemIconProps as Record<string, unknown>)"
       />
       <Component
         :is="layoutConfig.app.i18n.enable ? 'i18n-t' : 'span'"

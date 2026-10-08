@@ -125,7 +125,7 @@ const hideTitleAndIcon = configStore.isVerticalNavMini(isHovered)
       :update-is-vertical-nav-scrolled="updateIsVerticalNavScrolled"
     >
       <PerfectScrollbar
-        :key="configStore.isAppRTL"
+        :key="configStore.isAppRTL ? 'rtl' : 'ltr'"
         tag="ul"
         class="nav-items"
         :options="{ wheelPropagation: false }"
