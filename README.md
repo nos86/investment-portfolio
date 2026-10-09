@@ -30,3 +30,9 @@ cd backend && uv run ruff check .
 cd frontend && pnpm typecheck
 cd frontend && pnpm lint
 ```
+
+## Portfolio engine documentation
+
+Per una guida operativa sullo schema dati e sul motore di calcolo EUR:
+
+- [`backend/PORTFOLIO_ENGINE.md`](backend/PORTFOLIO_ENGINE.md)
