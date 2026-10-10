@@ -30,7 +30,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Enable pnpm
-        run: corepack enable && corepack prepare pnpm@latest --activate
+        run: corepack enable && corepack prepare pnpm@10.17.1 --activate
 
       - name: Install backend dependencies
         working-directory: backend
